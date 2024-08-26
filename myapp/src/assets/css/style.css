@@ -1,0 +1,217 @@
+/* FONTS */
+@import url(../css/clash-display.css);
+
+/* VARIABLES */
+:root {
+    --c-dark: #212529;
+    --c-brand: rgb(255, 255, 255);
+    --c-brand-light: rgb(255, 255, 255);;
+    --c-brand-rgb: 78, 87, 212;
+    --c-body: #000000;
+    --font-base: "ClashDisplay", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
+    --transition: all 0.5s ease;
+}
+/* logo */
+img {
+    width: 150px; /* กำหนดความกว้างของรูปภาพ */
+    height: 150px; /* กำหนดความสูงของรูปภาพ*/
+}
+
+body {
+    background-color: #000000; /* สีพื้นหลัง */
+    overflow-x: hidden;
+}
+
+/* RESET & HELPERS */
+body {
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);
+}
+
+h1, h2, h3,h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 100;
+    color: #ffffff; 
+}
+
+/* กำหนดรูปแบบลิงก์พื้นฐาน */
+a {
+    text-decoration: none; /* ไม่แสดงขีดเส้นใต้ลิงก์ */
+    color: var(--c-brand); /* สีของลิงก์ */
+    transition: var(--transition); /* การเปลี่ยนแปลงสีเมื่อโฮเวอร์ */
+}
+
+/* กำหนดสีของลิงก์เมื่อเอาเมาส์ไปวาง */
+a:hover {
+    color: var(--c-brand-light); /* สีของลิงก์เมื่อโฮเวอร์ (สีขาว) */
+}
+
+/* กำหนดรูปแบบของรูปภาพให้มีความกว้างสูงสุดที่ 100% และสูงอัตโนมัติ */
+img {
+    max-width: 100%; /* ความกว้างสูงสุดของรูปภาพ */
+    height: auto; /* ความสูงอัตโนมัติ */
+}
+
+/* กำหนดระยะห่างภายในส่วนต่างๆ */
+.section-padding {          
+    padding-top: 140px; /* ระยะห่างที่ด้านบนของส่วน */
+    padding-bottom: 140px; /* ระยะห่างที่ด้านล่างของส่วน */
+}
+
+/* กำหนดเงาของกล่อง */
+.theme-shadow {
+    box-shadow: var(--box-shadow); /* ใช้ค่าของตัวแปร --box-shadow */
+}
+/*  navbar */
+.navbar-nav .nav-link {
+    color: #ffffff; /* สีข้อความพื้นฐาน */
+    font-weight: 500; /* ความหนาของข้อความ */
+    transition: color 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีแบบเรียบเนียน */
+}
+
+/* เปลี่ยนสีของลิงก์เมื่อเมาส์ hover หรือ focus */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #ff0000; /* สีข้อความเมื่อ hover หรือ focus */
+    text-decoration: none; /* ลบเส้นขีดใต้เมื่อ hover หรือ focus */
+}
+/* สีของลิงก์ที่ถูกเลือก (active) */
+.navbar-nav .nav-link.active {
+    color: #ffffff; /* สีของลิงก์ที่ถูกเลือก */
+}   
+
+/* เปลี่ยนสีของลิงก์เมื่อคลิก (active) */
+.navbar-nav .nav-link:active {
+    color: #ff0000; /* สีข้อความเมื่อคลิก */
+}
+/* BTN */
+.d-flex {
+    font-weight: 200;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 5px 20px;
+}
+
+/* HERO */
+#hero {
+    /* ตั้งค่าให้คอนเทนเนอร์ของ HERO section ครอบคลุมความสูงเต็มหน้าจอ */
+    min-height: 100vh; /* ความสูงขั้นต่ำ 100% ของ viewport */
+    display: flex; /* ใช้ Flexbox เพื่อจัดแนวเนื้อหา */
+    align-items: center; /* จัดแนวเนื้อหาในแนวตั้ง */
+    text-align: left; /* จัดแนวข้อความไปทางซ้าย */
+    background-color: #000; /* สีพื้นหลังสำหรับการมองเห็นข้อความได้ชัด */
+     text-transform: lowercase;
+}
+
+.section-title .line {
+  /*  กำหนดขนาดและรูปแบบของแถบเส้นใต้ที่อยู่ภายในหัวข้อของส่วน */
+    width: 20px; /* ความกว้างของแถบเส้นใต้เป็น 60px */
+    height: 1px; /* ความสูงของแถบเส้นใต้เป็น 4px */
+    background-color: var(--c-brand);
+    margin: 10px;
+}
+
+.section-title p {
+    max-width: 300px; /* กำหนดความกว้างสูงสุดของพารากราฟ */
+    margin-left: 0; /* ลบระยะห่างด้านซ้ายเพื่อให้ชิดขอบซ้าย */
+    margin-right: auto; /* ระยะห่างด้านขวาให้เป็นอัตโนมัติ (จะทำให้ข้อความอยู่ที่ด้านซ้าย) */
+    color: #ffffff; /* กำหนดสีข้อความเป็นสีขาว */
+}
+
+/* container-fluid */
+.container-fluid {
+    height: 1vh;
+}
+      /* TV Shows */
+.figure-img {
+    width: 100%; /* ขยายรูปภาพให้เต็มความกว้างของ container */
+    height: auto; /* รักษาสัดส่วนของรูปภาพ */
+}
+.figure-container {
+    display: flex; /* ใช้ Flexbox */
+    gap: 20px; /* ระยะห่างระหว่างรูปภาพ */
+    justify-content: flex-start; /* จัดให้อยู่ทางซ้ายมือ */
+    flex-wrap: nowrap; /* ไม่ให้รูปภาพแรพไปยังบรรทัดถัดไป */
+}
+
+.figure-item {
+    text-align: center; /* จัดข้อความในแต่ละรูปภาพให้อยู่กลาง */
+    flex: 0 0 auto; /* ป้องกันการหดตัวและการขยายตัวของรูปภาพ */
+}
+
+.figure-img {
+    width: 300px; /* กำหนดความกว้างของรูปภาพ */
+    height: auto; /* รักษาสัดส่วนของรูปภาพ */
+}
+
+.figure-caption {
+    font-size: 16px; /* ขนาดฟอนต์ */
+    color: #ffffff
+}
+
+
+  /* Movies */
+  .figure-img {
+    width: 100%; /* ขยายรูปภาพให้เต็มความกว้างของ container */
+    height: auto; /* รักษาสัดส่วนของรูปภาพ */
+}
+.figure-container {
+    display: flex; /* ใช้ Flexbox */
+    gap: 20px; /* ระยะห่างระหว่างรูปภาพ */
+    justify-content: flex-start; /* จัดให้อยู่ทางซ้ายมือ */
+    flex-wrap: nowrap; /* ไม่ให้รูปภาพแรพไปยังบรรทัดถัดไป */
+}
+
+.figure-item {
+    text-align: center; /* จัดข้อความในแต่ละรูปภาพให้อยู่กลาง */
+    flex: 0 0 auto; /* ป้องกันการหดตัวและการขยายตัวของรูปภาพ */
+}
+
+.figure-img {
+    width: 300px; /* กำหนดความกว้างของรูปภาพ */
+    height: auto; /* รักษาสัดส่วนของรูปภาพ */
+}
+
+.figure-caption {
+    font-size: 16px; /* ขนาดฟอนต์ */
+    color: #ffffff
+}
+
+/* FOOTER */
+footer {
+    padding-top: 120px; /* กำหนดระยะห่างด้านบนของ footer */
+}
+
+.footer-top {
+    padding-bottom: 40px; /* กำหนดระยะห่างด้านล่างของส่วนบนของ footer */
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* เพิ่มกรอบด้านล่างเป็นเส้นบางๆ สีขาวโปร่งใส */
+}
+
+.footer-bottom {
+    padding-top: 40px; /* กำหนดระยะห่างด้านบนของส่วนล่างของ footer */
+    padding-bottom: 40px; /* กำหนดระยะห่างด้านล่างของส่วนล่างของ footer */
+}
+
+/* กำหนดสีของข้อความ, ลิงก์ และรายการใน footer */
+footer li,
+footer p,
+footer a {
+    color: rgba(255,255,255,0.7); /* สีข้อความเป็นสีขาวโปร่งใส */
+}
+
+footer ul {
+    list-style: none; /* ลบจุดหรือหมายเลขของรายการใน unordered list */
+    padding: 0; /* ลบการ padding ของ ul */
+}
+
+/* สไตล์สำหรับเส้นแบ่งใน footer */
+footer .line {
+    width: 40px; /* ความกว้างของเส้นแบ่ง */
+    height: 4px; /* ความสูงของเส้นแบ่ง */
+    background-color: var(--c-brand); /* สีพื้นหลังของเส้นแบ่งใช้ตัวแปร --c-brand */
+    margin-top: 12px; /* ระยะห่างด้านบนของเส้นแบ่ง */
+    margin-bottom: 24px; /* ระยะห่างด้านล่างของเส้นแบ่ง */
+}

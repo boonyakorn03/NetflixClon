@@ -1,0 +1,24 @@
+html,
+body {
+  height: 100%;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+/* ปรับสีปุ่ม Sign in ให้เป็นสีแดง */
+.btn-primary {
+  background-color: #000000; /* สีพื้นหลังของปุ่มเป็นสีแดง */
+  border-color: #000000; /* สีกรอบของปุ่มเป็นสีแดง */
+  color: #ffffff; /* สีข้อความของปุ่มเป็นสีขาว */
+}
+
+.btn-primary:hover {
+  background-color: #000000; /* สีพื้นหลังของปุ่มเมื่อวางเมาส์อยู่บนปุ่มเป็นสีแดงเข้ม */
+  border-color: #000000; /* สีกรอบของปุ่มเมื่อวางเมาส์อยู่บนปุ่มเป็นสีแดงเข้ม */
+}
